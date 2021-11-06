@@ -34,6 +34,11 @@ export class InicioPage implements OnInit {
       icon: 'beer',
       name: 'autos',
       redirectTo:'/autos'
+    },
+    {
+      icon: 'beer',
+      name: 'noticias',
+      redirectTo:'/noticias'
     }
     
   ]

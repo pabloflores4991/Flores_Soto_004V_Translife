@@ -30,6 +30,27 @@ export class AppComponent {
       name: 'Modelos de autos', 
       redirecTo: '/autos'
     },
+    
+    {
+      icon: 'alarm-outline', 
+      name: 'Noticias', 
+      redirecTo: '/noticias'
+    },
+    {
+      icon: 'sunny-outline', 
+      name: 'ingresar vehículo', 
+      redirecTo: '/datos'
+    },
+    {
+      icon: 'sunny-outline', 
+      name: 'Modificar', 
+      redirecTo: '/modificar'
+    },
+    {
+      icon: 'car-sport-outline', 
+      name: 'registro', 
+      redirecTo: '/registro'
+    },
     {
       icon: 'log-in-outline', 
       name: 'Inicio sesión', 

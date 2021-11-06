@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { IngresadoGuard } from './ingresado.guard';
+//import { NoIngresadoGuard, } from './no-ingresado.guard';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'inicio',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -43,6 +45,24 @@ const routes: Routes = [
     path: 'compensacion',
     loadChildren: () => import('./pages/compensacion/compensacion.module').then( m => m.CompensacionPageModule)
   },
+  {
+    path: 'noticias',
+    loadChildren: () => import('./pages/noticias/noticias.module').then( m => m.NoticiasPageModule)
+  },
+  {
+    path: 'datos',
+    loadChildren: () => import('./pages/datos/datos.module').then( m => m.DatosPageModule)
+    ,canActivate: [IngresadoGuard]
+  },
+  {
+    path: 'modificar',
+    loadChildren: () => import('./pages/modificar/modificar.module').then( m => m.ModificarPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  
 ];
 
 @NgModule({

@@ -46,6 +46,35 @@ export class InputPage implements OnInit {
     console.log(this.usuario);
   }
   
+  showConfirm() {
+    this.alertController.create({
+      header: 'Confirm Alert',
+      subHeader: 'Beware lets confirm',
+      message: 'Are you sure? you want to leave without safty mask?',
+      buttons: [
+        {
+          text: 'Never',
+          handler: () => {
+            console.log('I care about humanity');
+          }
+        },
+        {
+          text: 'Not Sure',
+          handler: () => {
+            console.log('Let me think');
+          }
+        },
+        {
+          text: 'Yes!',
+          handler: () => {
+            console.log('Whatever');
+          }
+        }
+      ]
+    }).then(res => {
+      res.present();
+    });
+  }
 
 }
 

@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+          defaultHref="/"
+          text="volver"
+          color="primary"
+          mode="ios"></ion-back-button>
+    </ion-buttons>
+      <ion-title class="titulo">Crear cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+    <ion-card-header>
+      <ion-card-title>Crear cuenta</ion-card-title>
+    </ion-card-header>
+
+      <form [formGroup]="formularioRegistro" (keyup.enter)="guardar()">
+        <ion-item>
+          <ion-label position="stacked">Nombre de Usuario</ion-label>
+          <ion-input formControlName="nombre"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label position="stacked">Contraseña</ion-label>
+          <ion-input formControlName="password" type="password" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Confirmar contraseña</ion-label>
+          <ion-input formControlName="confirmacionPassword" type="password"></ion-input>
+        </ion-item>
+        <br>
+      </form>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="guardar()" type="submit" (click)="showAlert()" color="success"  expand="block">Crear cuenta</ion-button>
+        <ion-button routerLink="/login" type="submit" color="danger"  expand="block">Cancelar</ion-button>
+      </ion-col>
+    </ion-row>
+
+</ion-content>

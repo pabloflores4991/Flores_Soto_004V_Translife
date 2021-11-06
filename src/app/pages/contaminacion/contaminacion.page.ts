@@ -11,6 +11,7 @@ interface Componente {
   templateUrl: './contaminacion.page.html',
   styleUrls: ['./contaminacion.page.scss'],
 })
+
 export class ContaminacionPage implements OnInit {
 
   componentes: Componente[] =[
@@ -28,3 +29,4 @@ export class ContaminacionPage implements OnInit {
   }
 
 }
+
